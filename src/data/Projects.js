@@ -6,32 +6,50 @@ const projects = [
   {
     id: 1,
     title: "StudyVerse",
+    category: "React",
     image: studyverse,
     description:
-      "A virtual study café with Pomodoro timer, notes, tasks, analytics, and study rooms.",
-    technologies: ["React", "Bootstrap", "LocalStorage"],
-    github: "https://github.com/yourusername/studyverse",
-    live: "https://studyverse.netlify.app",
+      "Virtual Study Cafe with Pomodoro Timer, Notes, Analytics and Study Rooms.",
+    technologies: [
+      "React",
+      "Bootstrap",
+      "JavaScript",
+      "LocalStorage",
+    ],
+    github: "#",
+    live: "#",
   },
+
   {
     id: 2,
     title: "Canva Mini Clone",
+    category: "React",
     image: canva,
     description:
-      "A React-based design editor with drag-and-drop elements and canvas editing.",
-    technologies: ["React", "JavaScript", "CSS"],
-    github: "https://github.com/yourusername/canva-mini-clone",
-    live: "https://canvamini.netlify.app",
+      "React based Canva editor with drag-and-drop components.",
+    technologies: [
+      "React",
+      "JavaScript",
+      "CSS",
+    ],
+    github: "#",
+    live: "#",
   },
+
   {
     id: 3,
     title: "E-Commerce Website",
+    category: "React",
     image: ecommerce,
     description:
-      "A responsive online shopping website with product listing and shopping cart.",
-    technologies: ["React", "Bootstrap", "API"],
-    github: "https://github.com/yourusername/ecommerce",
-    live: "https://ecommerce.netlify.app",
+      "Responsive shopping website with cart and product listing.",
+    technologies: [
+      "React",
+      "Bootstrap",
+      "API",
+    ],
+    github: "#",
+    live: "#",
   },
 ];
 

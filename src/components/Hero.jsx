@@ -2,6 +2,7 @@ import profile from "../assets/images/profile.png";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import BackgroundBlobs from "./BackgroundBlobs";
 
 export default function Hero() {
   return (
@@ -10,14 +11,25 @@ export default function Hero() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       style={{
-        minHeight: "90vh",
-        background: "linear-gradient(135deg,#0f172a,#1e293b)",
+        minHeight: "100vh",
+        position: "relative",
+        overflow: "hidden",
+        background: "linear-gradient(135deg,#0F172A,#1E293B,#312E81)",
         color: "white",
         display: "flex",
         alignItems: "center",
       }}
     >
-      <div className="container">
+      {/* Animated Background */}
+      <BackgroundBlobs />
+
+      <div
+        className="container"
+        style={{
+          position: "relative",
+          zIndex: 2,
+        }}
+      >
         <div className="row align-items-center">
 
           {/* Left Side */}
@@ -29,30 +41,32 @@ export default function Hero() {
 
             <h1
               className="fw-bold display-3"
-              style={{ color: "#60A5FA" }}
+              style={{
+                color: "#60A5FA",
+              }}
             >
               Sanika Jagtap
             </h1>
 
             <TypeAnimation
               sequence={[
-                "Full Stack Developer",
+                "💻 Full Stack Developer",
                 2000,
-                "React Developer",
+                "⚛ React Developer",
                 2000,
-                "Frontend Developer",
+                "🎨 Frontend Developer",
                 2000,
-                "Backend Learner",
+                "🚀 Backend Learner",
                 2000,
               ]}
               wrapper="h3"
-              speed={40}
+              speed={45}
               repeat={Infinity}
               style={{
-                color: "#60A5FA",
-                fontWeight: "bold",
+                color: "#38BDF8",
+                fontWeight: "700",
                 marginTop: "15px",
-                minHeight: "45px",
+                minHeight: "55px",
               }}
             />
 
@@ -71,16 +85,24 @@ export default function Hero() {
             <div className="mt-4">
 
               <motion.button
-                whileHover={{ scale: 1.08 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{
+                  scale: 1.08,
+                }}
+                whileTap={{
+                  scale: 0.95,
+                }}
                 className="btn btn-primary btn-lg me-3"
               >
                 View Projects
               </motion.button>
 
               <motion.button
-                whileHover={{ scale: 1.08 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{
+                  scale: 1.08,
+                }}
+                whileTap={{
+                  scale: 0.95,
+                }}
                 className="btn btn-outline-light btn-lg"
               >
                 Download Resume
@@ -89,14 +111,20 @@ export default function Hero() {
             </div>
 
             {/* Social Icons */}
+
             <div className="mt-4 d-flex gap-4 justify-content-center justify-content-lg-start">
 
               <motion.a
                 href="https://github.com/your-github-username"
                 target="_blank"
                 rel="noreferrer"
-                whileHover={{ scale: 1.3, rotate: 10 }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={{
+                  scale: 1.3,
+                  rotate: 10,
+                }}
+                whileTap={{
+                  scale: 0.9,
+                }}
                 className="text-white fs-3"
               >
                 <FaGithub />
@@ -106,8 +134,13 @@ export default function Hero() {
                 href="https://www.linkedin.com/in/your-linkedin-username"
                 target="_blank"
                 rel="noreferrer"
-                whileHover={{ scale: 1.3, rotate: 10 }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={{
+                  scale: 1.3,
+                  rotate: 10,
+                }}
+                whileTap={{
+                  scale: 0.9,
+                }}
                 className="text-white fs-3"
               >
                 <FaLinkedin />
@@ -115,8 +148,13 @@ export default function Hero() {
 
               <motion.a
                 href="mailto:youremail@gmail.com"
-                whileHover={{ scale: 1.3, rotate: 10 }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={{
+                  scale: 1.3,
+                  rotate: 10,
+                }}
+                whileTap={{
+                  scale: 0.9,
+                }}
                 className="text-white fs-3"
               >
                 <FaEnvelope />
@@ -127,6 +165,7 @@ export default function Hero() {
           </div>
 
           {/* Right Side */}
+
           <div className="col-lg-6 text-center mt-5 mt-lg-0">
 
             <motion.img
@@ -140,16 +179,26 @@ export default function Hero() {
                 border: "6px solid #60A5FA",
               }}
               initial={{
-                scale: 0.7,
+                scale: 0.8,
                 opacity: 0,
               }}
               animate={{
                 scale: 1,
                 opacity: 1,
+                y: [0, -15, 0],
               }}
               transition={{
-                duration: 1,
-                delay: 0.5,
+                opacity: {
+                  duration: 1,
+                },
+                scale: {
+                  duration: 1,
+                },
+                y: {
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                },
               }}
             />
 
@@ -157,6 +206,7 @@ export default function Hero() {
 
         </div>
       </div>
+
     </motion.section>
   );
 }
