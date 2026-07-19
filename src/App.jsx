@@ -6,6 +6,7 @@ import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
 import NotFound from "./Pages/NotFound";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 
 export default function App() {
@@ -24,6 +25,9 @@ export default function App() {
       
         <Route path="*" element={ <NotFound />} />
       </Routes>
+
+      <Footer />
     </BrowserRouter>
+
   );
 }

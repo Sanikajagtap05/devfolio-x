@@ -1,4 +1,5 @@
 import AboutSection from "../components/AboutSection";
+import CertificationSection from "../components/CertificationSection";
 import Hero from "../components/Hero";
 import ProjectsSection from "../components/ProjectSection";
 import SkillsSection from "../components/SkillSection";
@@ -10,6 +11,7 @@ export default function Home() {
       <AboutSection />
       <SkillsSection />
       <ProjectsSection />
+      <CertificationSection />
     </>
   );
 }
