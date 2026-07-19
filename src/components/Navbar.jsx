@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { FaCode } from "react-icons/fa";
+import ThemeToggle from "./ThemeToggle";
+
 
 export default function Navbar() {
   return (
@@ -31,49 +33,43 @@ export default function Navbar() {
         </button>
 
         <div
-          className="collapse navbar-collapse"
-          id="menu"
-        >
-          <ul className="navbar-nav ms-auto">
+  className="collapse navbar-collapse"
+  id="menu"
+>
+  <ul className="navbar-nav ms-auto">
 
-            <li className="nav-item">
-              <NavLink
-                to="/"
-                className="nav-link"
-              >
-                Home
-              </NavLink>
-            </li>
+    <li className="nav-item">
+      <NavLink to="/" className="nav-link">
+        Home
+      </NavLink>
+    </li>
 
-            <li className="nav-item">
-              <NavLink
-                to="/about"
-                className="nav-link"
-              >
-                About
-              </NavLink>
-            </li>
+    <li className="nav-item">
+      <NavLink to="/about" className="nav-link">
+        About
+      </NavLink>
+    </li>
 
-            <li className="nav-item">
-              <NavLink
-                to="/projects"
-                className="nav-link"
-              >
-                Projects
-              </NavLink>
-            </li>
+    <li className="nav-item">
+      <NavLink to="/projects" className="nav-link">
+        Projects
+      </NavLink>
+    </li>
 
-            <li className="nav-item">
-              <NavLink
-                to="/contact"
-                className="nav-link"
-              >
-                Contact
-              </NavLink>
-            </li>
+    <li className="nav-item">
+      <NavLink to="/contact" className="nav-link">
+        Contact
+      </NavLink>
+    </li>
 
-          </ul>
-        </div>
+  </ul>
+
+  {/* Theme Toggle Button */}
+  <div className="ms-lg-3 mt-3 mt-lg-0">
+    <ThemeToggle />
+  </div>
+
+</div>
 
       </div>
     </nav>
