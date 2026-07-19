@@ -1,9 +1,15 @@
+import AboutSection from "../components/AboutSection";
+import Hero from "../components/Hero";
+import ProjectsSection from "../components/ProjectSection";
+import SkillsSection from "../components/SkillSection";
+
 export default function Home() {
   return (
-    <div className="container py-5">
-
-      <h1>Home Page</h1>
-
-    </div>
+    <>
+      <Hero />
+      <AboutSection />
+      <SkillsSection />
+      <ProjectsSection />
+    </>
   );
 }
