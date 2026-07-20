@@ -3,7 +3,7 @@ import Home from "./Pages/Home";
 
 import About from "./Pages/About";
 import Projects from "./Pages/Projects";
-import Contact from "./Pages/Contact";
+import Contact from "./components/Contact";
 import NotFound from "./Pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -16,14 +16,6 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={ <Home />} />
-           
-        <Route path="/about" element={  <About />} />
-        
-        <Route path="/projects" element={<Projects />} />
-
-        <Route path="/contact" element={  <Contact />} />
-      
-        <Route path="*" element={ <NotFound />} />
       </Routes>
 
       <Footer />

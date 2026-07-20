@@ -21,7 +21,7 @@ export default function ProjectsSection() {
   });
 
   return (
-    <section
+    <section id="projects"
       style={{
         padding: "90px 0",
         background: "#F8FAFC",

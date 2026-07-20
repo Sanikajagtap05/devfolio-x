@@ -8,7 +8,7 @@ import {
 
 export default function Contact() {
   return (
-    <section
+    <section id="contact"
       style={{
         background: "#111827",
         padding: "90px 0",

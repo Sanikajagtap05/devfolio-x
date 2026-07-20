@@ -3,7 +3,7 @@ import { FaGraduationCap, FaLaptopCode, FaMapMarkerAlt, FaHeart } from "react-ic
 
 export default function AboutSection() {
   return (
-    <section
+    <section id="about"
       style={{
         background: "#F8FAFC",
         padding: "80px 0",
